@@ -165,6 +165,14 @@ __attribute__((swift_name("IOSPlatform")))
 @end
 
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SharedClass")))
+@interface SharedSharedClass : SharedBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (NSString *)returnAStringValue __attribute__((swift_name("returnAStringValue()")));
+@end
+
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("PlatformKt")))
 @interface SharedPlatformKt : SharedBase
 + (id<SharedPlatform>)getPlatform __attribute__((swift_name("getPlatform()")));
