@@ -169,7 +169,6 @@ __attribute__((swift_name("SharedClass")))
 @interface SharedSharedClass : SharedBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (int32_t)doJob __attribute__((swift_name("doJob()")));
 - (NSString *)returnAStringValue __attribute__((swift_name("returnAStringValue()")));
 @end
 
